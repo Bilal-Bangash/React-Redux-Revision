@@ -1,17 +1,11 @@
 import {
-  withStyles,
-  List,
   ListItem,
   ListItemSecondaryAction,
   ListItemText,
   IconButton,
-  Grid,
-  TextField,
-  Button,
-  FormControl,
 } from "@material-ui/core";
 import DeleteIcon from "@material-ui/icons/Delete";
-const ListComponent = ({ items }) => {
+const ListComponent = ({ items, handleDelete }) => {
   return items.map((item) => (
     <ListItem key={item.id}>
       <ListItemText primary={item.description} />
